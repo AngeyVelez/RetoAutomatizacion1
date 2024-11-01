@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"BusinessUnit creation","Successful login with valid credentials","ERROR","2024-10-31T14:33:32.1109203-05:00[America/Bogota]","0.0","21.61"
+"BusinessUnit creation","Successful creation of a business unit","PENDING","2024-10-31T14:33:54.029544-05:00[America/Bogota]","0.0","0.2"
+"Successful login on serenity's  website","Successful login with valid credentials","SUCCESS","2024-10-30T16:58:11.4926495-05:00[America/Bogota]","0.0","1.29"
+"Successful login on serenity's  website","Successful login with valid credentials","SUCCESS","2024-10-30T22:00:08.2433586-05:00[America/Bogota]","0.0","41.28"
