@@ -3,7 +3,7 @@ package com.co.selfhealing.stepdefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import models.BusinessUnitModel;
+import models.BusinessUnitLombok;
 import net.serenitybdd.screenplay.actors.OnStage;
 import questions.ValidateBusinessUnit;
 import tasks.CreateBusinessUnit;
@@ -17,7 +17,7 @@ public class CreateBusinessUnitStepDefinitions {
     @When("the user attempts to create a business unit")
     public void theUserAttemptsToCreateABusinessUnit(DataTable dataTable) {
         OnStage.theActorCalled(ACTOR).attemptsTo(
-                CreateBusinessUnit.on(BusinessUnitModel.setData(dataTable).get(0))
+                CreateBusinessUnit.on(BusinessUnitLombok.setData(dataTable).get(0))
         );
     }
     @Then("^the user see the (.*) unit on the list$")

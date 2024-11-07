@@ -13,5 +13,4 @@ public class BusinessUnitPage {
     public static final Target BTN_SAVE = Target.the("Save business unit button").locatedBy("//div[@data-action='save-and-close']");
     public static final Target TXT_VALIDATION = Target.the("Text to validate the success creation").locatedBy("//*[contains(@class, 'slick-cell')]//*[contains(text(), '{0}')]");
 
-
 }

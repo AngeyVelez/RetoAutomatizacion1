@@ -3,7 +3,7 @@ package com.co.selfhealing.stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import models.LoginModel;
+import models.LoginLombok;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import questions.ValidateText;
@@ -26,7 +26,7 @@ public class LoginStepDefinitions {
     @When("the user enters valid credentials")
     public void theUserEntersValidCredentials(io.cucumber.datatable.DataTable dataTable) {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                DoLogin.onSite(LoginModel.setData(dataTable).get(0))
+                DoLogin.onSite(LoginLombok.setData(dataTable).get(0))
         );
     }
 

@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Successful creation of a new meeting</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<!-- ImgPreview -->
+<script src="scripts/imgpreview.full.jquery.js" type="text/javascript"></script>
+</head>
+
+<body class="results-page">
+
+
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">BaseScreenPlay</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs">Home</a>
+
+ <!-- inflection.of(breadcrumb.displayName).asATitle()-->
+            > <a href="914760444022a1839386b47b9574ae50_s_sl_features_sl_createmeeting.html">Meeting creation</a>
+        > Successful creation of a new meeting
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="d782c44557441225cc92a5e35bf4b23b_requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-11-2024 10:45</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                                <div>
+                                    <h3 class="discreet-story-header">
+                                        <i class="fs-2 bi bi-chat-left-quote title-icon"></i>
+                                        <span class="story-header-title">Meeting Creation </span>
+                                    </h3>
+
+                                </div>
+
+                        </td>
+                        <td valign="top">
+                            <p class="tag">
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="f4bfe10ad76acaea03f39cc8abe136d8_duration_10_to_30_seconds.html">10 To 30 Seconds
+                                              (Duration)
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="b587a0a9274f8b6e3d8e0bb0ae8cb9bf_context_chrome.html">Chrome
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="a396efb27cdfe5a722be3d67da3e0319_context_windows.html">Windows
+                                        </a>
+                                </span>
+                                    <span class="badge example-tag tag-badge" style="background:default;">
+                                    <i class="bi bi-tag-fill"></i>&nbsp;
+                                        <a class="tagLink" style="background:default;"
+                                           href="e54337ba32bd5d52b2c4a3afe4819b97_context_chrome_c__windows.html">Chrome, Windows
+                                        </a>
+                                </span>
+                                    <span class='context-icon'><i class='bi bi-browser-chrome' title='Chrome'></i> <i class='bi bi-windows' title='Windows'></i></span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    Successful creation of a new meeting
+                                        <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- CAST MEMBERS -->
+            <div>&nbsp;</div>
+            <div>
+                <h3 class="discreet-story-header">
+                    <i class="fs-2 bi bi-people large-icon"></i>
+                    <span class="story-header-title">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#castDetails"
+                           role="button" aria-expanded="true" aria-controls="castDetails">Cast</a>
+                    </span>
+                </h3>
+            </div>
+            <div class="collapse multi-collapse" id="castDetails">
+                <table class="cast">
+                    <tr>
+                            <td width="100%">
+                                <h4>
+                                    <i class="fs-2 bi bi-person"></i>&nbsp;
+                                    <span>
+                                        <a data-toggle="collapse" href="#abilities-Angey"
+                                           aria-expanded="false" aria-controls="abilities">Angey</a>
+                                        
+                                    </span>
+                                </h4>
+                                <div class="collapse multi-collapse" id="abilities-Angey">
+                                        <div>
+                                            <span class="cast-description">Angey can:</span>
+                                            <ul>
+                                                    <li>browse the web</li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <!-- END CAST MEMBERS -->
+
+
+</div>
+</div>
+
+<div class="clr"></div>
+
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">When the user attempts to create a new meeting<br><table class='embedded'><thead><th>name</th><th>type</th><th>number</th><th>startDate</th><th>endDate</th><th>location</th><th>businessUnit</th><th>organizedBy</th><th>reporter</th></thead><tbody><tr><td>&lt;name&gt;</td><td>&lt;type&gt;</td><td>&lt;number&gt;</td><td>&lt;startDate&gt;</td><td>&lt;endDate&gt;</td><td>&lt;location&gt;</td><td>&lt;businessUnit&gt;</td><td>&lt;organizedBy&gt;</td><td>&lt;reporter&gt;</td></tr></tbody></table><br>Then the user see the new meeting &lt;name&gt; on the list</div>
+
+    </div>
+
+<div id="beforetable"></div>
+
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Number</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Location</th>
+                        <th>Business Unit</th>
+                        <th>Organized By</th>
+                        <th>Reporter</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Angey</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Customer</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">0001</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">05/11/2024 10:30</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">05/11/2024 11:30</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">On Site</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Administration</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Aaron Taylor</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Aaron Taylor</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+<div id="tablecontents">
+    <div>
+        <table class="step-table">
+            <tr class="step-titles">
+                <th width="65">
+                </th>
+                <th class="step-description-column greentext">
+                    Steps
+                </th>
+
+                    <th width="150" class="greentext">Screenshots</th>
+                <th width="130" class="greentext">Outcome</th>
+                <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
+            </tr>
+            <tr class="step-table-separator">
+                <td colspan="5"></td>
+            </tr>
+
+                <tr class="test-SUCCESS">
+
+                    <td width="50" class="step-icon">
+                        <a name="0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                1: Successful creation of a new meeting ({name=Angey, type=Customer, number=0001, startDate=05/11/2024 10:30, endDate=05/11/2024 11:30, location=On Site, businessUnit=Administration, organizedBy=Aaron Taylor, reporter=Aaron Taylor})
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=0">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=48">
+                                    <img src="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         href="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">24s 478ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                When the user attempts to create a new meeting<br><table class='embedded'><thead><th>name</th><th>type</th><th>number</th><th>startDate</th><th>endDate</th><th>location</th><th>businessUnit</th><th>organizedBy</th><th>reporter</th></thead><tbody><tr><td>Angey</td><td>Customer</td><td>0001</td><td>05/11/2024 10:30</td><td>05/11/2024 11:30</td><td>On Site</td><td>Administration</td><td>Aaron Taylor</td><td>Aaron Taylor</td></tr></tbody></table>
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=1">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=44">
+                                    <img src="6b9ad2146506e79948ccea0f609ee573025daca01486e9085f5151a7833b3646.png"
+                                         href="6b9ad2146506e79948ccea0f609ee573025daca01486e9085f5151a7833b3646.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">22s 795ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Angey create meeting
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=2">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=43">
+                                    <img src="fe46f13fd843cda3c21faeba10720ea037976e10e44cea8a3dfae2a997684a9f.png"
+                                         href="fe46f13fd843cda3c21faeba10720ea037976e10e44cea8a3dfae2a997684a9f.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">22s 062ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Meeting option menu on sidebar
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=3">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=4">
+                                    <img src="673e5459b2da256422e20330a25855fec48bb8da558054a282ab924b7ea95cfe.png"
+                                         href="673e5459b2da256422e20330a25855fec48bb8da558054a282ab924b7ea95cfe.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">901ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-1"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Meetings submenu from Meeting
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=5">
+                                    <img src="673e5459b2da256422e20330a25855fec48bb8da558054a282ab924b7ea95cfe.png"
+                                         href="673e5459b2da256422e20330a25855fec48bb8da558054a282ab924b7ea95cfe.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=6">
+                                    <img src="6ed8c136961106603335e4b4f639460eb2441f70d628115205556aea7a3b4fa5.png"
+                                         href="6ed8c136961106603335e4b4f639460eb2441f70d628115205556aea7a3b4fa5.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">3s 920ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-2"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Add new meeting button
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=7">
+                                    <img src="9bb70a17821436efb8cc0089a637135c3eaf5b67bb0084709e4ca3b83d4562f9.png"
+                                         href="9bb70a17821436efb8cc0089a637135c3eaf5b67bb0084709e4ca3b83d4562f9.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=8">
+                                    <img src="6a8af1b21060964d4e8df28405e5a0c44513767ed6c410a5a3455db8953f0265.png"
+                                         href="6a8af1b21060964d4e8df28405e5a0c44513767ed6c410a5a3455db8953f0265.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">804ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-3"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey enters 'Angey' into Meeting name input
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=9">
+                                    <img src="6bb8c89fb27c6e86e9fe5d47970d71f374383f5896cdfecf62fb2a9e48427e8c.png"
+                                         href="6bb8c89fb27c6e86e9fe5d47970d71f374383f5896cdfecf62fb2a9e48427e8c.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=10">
+                                    <img src="570737f9cfeb5786c237c242023a3524667778685a40e447337fc1d4edfc2af7.png"
+                                         href="570737f9cfeb5786c237c242023a3524667778685a40e447337fc1d4edfc2af7.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 119ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-4"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Meeting type dropdown
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=11">
+                                    <img src="075e419573a0b38ff0c25e028b41022c250c6b557e182338032a479fa6157140.png"
+                                         href="075e419573a0b38ff0c25e028b41022c250c6b557e182338032a479fa6157140.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=13">
+                                    <img src="83ad4895fdfba0b18776167effd3e685a3dedbec1633247a25395d6fb759e6b2.png"
+                                         href="83ad4895fdfba0b18776167effd3e685a3dedbec1633247a25395d6fb759e6b2.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 508ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-5"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=14">
+                                    <img src="2a6508cc7c4261268dcb29e1ade3d022eded5b269c05f706fe206bd87e99a2e0.png"
+                                         href="2a6508cc7c4261268dcb29e1ade3d022eded5b269c05f706fe206bd87e99a2e0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=15">
+                                    <img src="1fc3a64653c28ae5aeac06a7f749a1fc2d7098596c1c8a9bed7c10604cf3ee5d.png"
+                                         href="1fc3a64653c28ae5aeac06a7f749a1fc2d7098596c1c8a9bed7c10604cf3ee5d.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">893ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-6"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey enters '0001' into Meeting number input
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=16">
+                                    <img src="1fc3a64653c28ae5aeac06a7f749a1fc2d7098596c1c8a9bed7c10604cf3ee5d.png"
+                                         href="1fc3a64653c28ae5aeac06a7f749a1fc2d7098596c1c8a9bed7c10604cf3ee5d.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=18">
+                                    <img src="061fa8012d34daae489cde3c19aeb3c8368f6c63cade0978a10427a436b0c5ff.png"
+                                         href="061fa8012d34daae489cde3c19aeb3c8368f6c63cade0978a10427a436b0c5ff.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 123ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-7"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey enters '05/11/2024 10:30' into Meeting start date input
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=19">
+                                    <img src="4ef829caafbf6cabcb1ed8cc77675f3d859e587711589798bde4ed7d309897be.png"
+                                         href="4ef829caafbf6cabcb1ed8cc77675f3d859e587711589798bde4ed7d309897be.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=21">
+                                    <img src="b839f2aff0b1f1d3b49952859f3c10cfe01fdc3c99d7c2416ddd2b7beb3d21b0.png"
+                                         href="b839f2aff0b1f1d3b49952859f3c10cfe01fdc3c99d7c2416ddd2b7beb3d21b0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 073ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-8"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey enters '05/11/2024 11:30' into Meeting end date input
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=22">
+                                    <img src="d789de09db020b6f45df1bd252395b22627212e2a7f53eb1b62bf9329b354595.png"
+                                         href="d789de09db020b6f45df1bd252395b22627212e2a7f53eb1b62bf9329b354595.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=24">
+                                    <img src="b7afc2e54b312483d1e6242eb6746c404a435659e1f84f18eeaa8ad71b8f5131.png"
+                                         href="b7afc2e54b312483d1e6242eb6746c404a435659e1f84f18eeaa8ad71b8f5131.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 076ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-9"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Location dropdown
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=25">
+                                    <img src="200b151910ea70763f7ebf2364fdba93c41dc20b248cfbc44c0ee5ea743b50ed.png"
+                                         href="200b151910ea70763f7ebf2364fdba93c41dc20b248cfbc44c0ee5ea743b50ed.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=27">
+                                    <img src="a40af6554a3ab0fdc0952eb927d852110906287a908a362fe6750acb39c3fed2.png"
+                                         href="a40af6554a3ab0fdc0952eb927d852110906287a908a362fe6750acb39c3fed2.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 073ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-10"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=28">
+                                    <img src="10d63169a55d496142b3f3b0fba4eba846a8556cccb13b9e88563d80ae1223a0.png"
+                                         href="10d63169a55d496142b3f3b0fba4eba846a8556cccb13b9e88563d80ae1223a0.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=29">
+                                    <img src="5e3700475e7f2945a05999fa6691917df84942786c235a167f83b26e715657dd.png"
+                                         href="5e3700475e7f2945a05999fa6691917df84942786c235a167f83b26e715657dd.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">752ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-11"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Business unit dropdown
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=30">
+                                    <img src="5e3700475e7f2945a05999fa6691917df84942786c235a167f83b26e715657dd.png"
+                                         href="5e3700475e7f2945a05999fa6691917df84942786c235a167f83b26e715657dd.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=31">
+                                    <img src="6ca2c16491d2a1690bde4239cab49da6ad5a3d35fe2f39de7f1ef6ab5aa489fc.png"
+                                         href="6ca2c16491d2a1690bde4239cab49da6ad5a3d35fe2f39de7f1ef6ab5aa489fc.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 131ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-12"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=32">
+                                    <img src="b506279d1a09126c8004c6a44bf33d4e75582c6ca18f53aee4dc006f6da972b8.png"
+                                         href="b506279d1a09126c8004c6a44bf33d4e75582c6ca18f53aee4dc006f6da972b8.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=33">
+                                    <img src="19563940d2dbe719d484ab0bede85510191c26dcb364bee5137e111314405033.png"
+                                         href="19563940d2dbe719d484ab0bede85510191c26dcb364bee5137e111314405033.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">725ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-13"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Organized by dropdown
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=34">
+                                    <img src="19563940d2dbe719d484ab0bede85510191c26dcb364bee5137e111314405033.png"
+                                         href="19563940d2dbe719d484ab0bede85510191c26dcb364bee5137e111314405033.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=35">
+                                    <img src="4c1734e935e2b1e566d650756f4e379faca1558781517d2677846f97e1ad3e6b.png"
+                                         href="4c1734e935e2b1e566d650756f4e379faca1558781517d2677846f97e1ad3e6b.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 121ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-14"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=36">
+                                    <img src="a3140ea2401d3caccd1cda97d642c55028f39cf117cccc2f82550ce4ffe3da67.png"
+                                         href="a3140ea2401d3caccd1cda97d642c55028f39cf117cccc2f82550ce4ffe3da67.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=37">
+                                    <img src="a83865bf3e89a7fa8edaf0dc3ff121043dd9c35906945d6718016a7f948349f1.png"
+                                         href="a83865bf3e89a7fa8edaf0dc3ff121043dd9c35906945d6718016a7f948349f1.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">682ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-15"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Reporter dropdown
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=38">
+                                    <img src="a83865bf3e89a7fa8edaf0dc3ff121043dd9c35906945d6718016a7f948349f1.png"
+                                         href="a83865bf3e89a7fa8edaf0dc3ff121043dd9c35906945d6718016a7f948349f1.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=39">
+                                    <img src="5f3b8de18d42b47b0b99373f76cb28df50988f831a80768d8b453cea60b931ff.png"
+                                         href="5f3b8de18d42b47b0b99373f76cb28df50988f831a80768d8b453cea60b931ff.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 113ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-16"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=40">
+                                    <img src="eae80d3dada1176a2e76139c46b02a6e7543a012ab5b1a6e46cbcacd3edd5653.png"
+                                         href="eae80d3dada1176a2e76139c46b02a6e7543a012ab5b1a6e46cbcacd3edd5653.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=41">
+                                    <img src="4a4b1adb6d80d373e02caba1d29cd882e83aaed9c84d99429bbb02ef62de91ef.png"
+                                         href="4a4b1adb6d80d373e02caba1d29cd882e83aaed9c84d99429bbb02ef62de91ef.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">679ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-17"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Save button
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=42">
+                                    <img src="4a4b1adb6d80d373e02caba1d29cd882e83aaed9c84d99429bbb02ef62de91ef.png"
+                                         href="4a4b1adb6d80d373e02caba1d29cd882e83aaed9c84d99429bbb02ef62de91ef.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">596ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then the user see the new meeting Angey on the list
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=47">
+                                    <img src="6b9ad2146506e79948ccea0f609ee573025daca01486e9085f5151a7833b3646.png"
+                                         href="6b9ad2146506e79948ccea0f609ee573025daca01486e9085f5151a7833b3646.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=49">
+                                    <img src="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         href="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">1s 212ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-1-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then validate business unit
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="cf8d6a83eb404773fa9892757eed2884_me_comma_windows_createmeeting_screenshots.html#screenshots?screenshot=48">
+                                    <img src="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         href="898ecb90088d62bad46780d682228d8f8558b9f7e995981dd026eb4c95f50e0e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">679ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-SUCCESS">
+                    <td colspan="3"></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>24.57s</em></span></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div id="beforefooter"></div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 3.9.2</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggleDiv(divId) {
+        $("#" + divId).toggle();
+        var $icon = $(".img" + divId);
+        $icon.toggleClass("bi-caret-right-square");
+        $icon.toggleClass("bi-caret-down-square");
+    }
+</script>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    $(document).ready(function () {
+        $('img.screenshot').imgPreview({
+            imgCSS: {
+                width: '500px'
+            },
+            distanceFromCursor: {top: 10, left: -200}
+        });
+    });
+
+    //]]>
+</script>
+<div id="imgPreviewContainer" style="position: absolute; top: 612px; left: 355px; display: none; " class=""><img
+            src="" style="display: none; "></div>
+<div id="imgPreviewContainer2" style="position: absolute; top: 925px; left: 320px; display: none; " class="">
+    <img style="width: 200px; display: none; " src=""></div>
+<div id="imgPreviewWithStyles" style="position: absolute; top: 1272px; left: 321px; display: none; " class="">
+    <img style="height: 200px; opacity: 1; display: none; " src=""></div>
+<div id="imgPreviewWithStyles2" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+<div id="imgPreviewWithStyles3" style="display: none; position: absolute; "><img style="height: 200px; "></div>
+
+</div>
+</body>
+</html>

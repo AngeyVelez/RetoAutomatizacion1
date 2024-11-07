@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Meeting creation" skipped="0" tests="2" time="51.53" timestamp="2024-11-06 10:44:38"><testcase name="Successful login with valid credentials"/><testcase name="Successful creation of a new meeting"/></testsuite>

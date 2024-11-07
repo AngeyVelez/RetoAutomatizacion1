@@ -144,7 +144,7 @@
             <a href="d782c44557441225cc92a5e35bf4b23b_requirement_type_feature.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-10-2024 14:33</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-11-2024 10:46</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -170,7 +170,7 @@
                                     <span class="badge example-tag tag-badge" style="background:default;">
                                     <i class="bi bi-tag-fill"></i>&nbsp;
                                         <a class="tagLink" style="background:default;"
-                                           href="953d4a01a6f5306df6756be93bbc9deb_duration_under_1_second.html">Under 1 Second
+                                           href="f4bfe10ad76acaea03f39cc8abe136d8_duration_10_to_30_seconds.html">10 To 30 Seconds
                                               (Duration)
                                         </a>
                                 </span>
@@ -202,9 +202,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="pending-color">
+                                <span class="success-color">
                                     Successful creation of a business unit
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -217,15 +217,93 @@
             </div>
 
 
+            <!-- CAST MEMBERS -->
+            <div>&nbsp;</div>
+            <div>
+                <h3 class="discreet-story-header">
+                    <i class="fs-2 bi bi-people large-icon"></i>
+                    <span class="story-header-title">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#castDetails"
+                           role="button" aria-expanded="true" aria-controls="castDetails">Cast</a>
+                    </span>
+                </h3>
+            </div>
+            <div class="collapse multi-collapse" id="castDetails">
+                <table class="cast">
+                    <tr>
+                            <td width="100%">
+                                <h4>
+                                    <i class="fs-2 bi bi-person"></i>&nbsp;
+                                    <span>
+                                        <a data-toggle="collapse" href="#abilities-Angey"
+                                           aria-expanded="false" aria-controls="abilities">Angey</a>
+                                        
+                                    </span>
+                                </h4>
+                                <div class="collapse multi-collapse" id="abilities-Angey">
+                                        <div>
+                                            <span class="cast-description">Angey can:</span>
+                                            <ul>
+                                                    <li>browse the web</li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <!-- END CAST MEMBERS -->
+
 
 </div>
 </div>
 
 <div class="clr"></div>
 
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">When the user attempts to create a business unit<br><table class='embedded'><thead><th>business</th><th>unitName</th></thead><tbody><tr><td>&lt;business&gt;</td><td>&lt;unitName&gt;</td></tr></tbody></table><br>Then the user see the &lt;unitName&gt; unit on the list</div>
+
+    </div>
 
 <div id="beforetable"></div>
 
+
+        <h3 class="story-header">Examples:&nbsp;</h3>
+            <div class="requirementNarrative"></div>
+
+
+            <p class="example-tag">
+            </p>
+
+        <div class="example-table test-report">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Business</th>
+                        <th>Unit Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Administration</a>
+                            </td>
+                            <td class="test-SUCCESS"><a
+                                        href="#0">Armenia</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 <div id="tablecontents">
     <div>
@@ -237,6 +315,7 @@
                     Steps
                 </th>
 
+                    <th width="150" class="greentext">Screenshots</th>
                 <th width="130" class="greentext">Outcome</th>
                 <th width="100" class="greentext"><i title="Duration" class="bi bi-stopwatch"></i></th>
             </tr>
@@ -244,54 +323,500 @@
                 <td colspan="5"></td>
             </tr>
 
-                <tr class="test-PENDING">
+                <tr class="test-SUCCESS">
 
                     <td width="50" class="step-icon">
                         <a name="0"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
+                                <span class="top-level-step">
+                                                1: Successful creation of a business unit ({business=Administration, unitName=Armenia})
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=0">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=22">
+                                    <img src="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         href="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">11s 382ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                When the user attempts to create a business unit<br><table class='embedded'><thead><th>business</th><th>unitName</th></thead><tbody><tr><td>Administration</td><td>Armenia</td></tr></tbody></table>
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=1">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=18">
+                                    <img src="1592ccd965d9cabc5354b7dde9905e84c45f632794779eb4b57535850ddb367c.png"
+                                         href="1592ccd965d9cabc5354b7dde9905e84c45f632794779eb4b57535850ddb367c.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">9s 774ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-0-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Angey create business unit
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=2">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=17">
+                                    <img src="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         href="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">8s 578ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
-                                                When the user attempts to create a business unit
+                                <span class="nested-group-step">
+                                                Angey clicks on Organization button
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">PENDING</span></td>
-                    <td width="100"><span class="top-level-step">076ms</span></td>
-                </tr>
-                <tr class="test-IGNORED">
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=3">
+                                    <img src="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         href="1f745fbaf500d1253e2cbbb9024b3c6131fd45bc9ce6de5de39d59b9f83b2669.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
 
-                    <td width="50" class="step-icon">
-                        <a name="1"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=4">
+                                    <img src="971eb887a8949103154023be4c058dbd7084b2adbf13a948cd1489a65af2df66.png"
+                                         href="971eb887a8949103154023be4c058dbd7084b2adbf13a948cd1489a65af2df66.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">650ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-1"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
-                                <span class="top-level-step">
-                                                Then the user see the unit on the list
+                                <span class="nested-group-step">
+                                                Angey clicks on Business unit button
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">IGNORED</span></td>
-                    <td width="100"><span class="top-level-step">075ms</span></td>
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=5">
+                                    <img src="ab412cd1b9d265c94adfd6c58bd2208c858127b9f41e9189aa8208a35e8a627d.png"
+                                         href="ab412cd1b9d265c94adfd6c58bd2208c858127b9f41e9189aa8208a35e8a627d.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=6">
+                                    <img src="4525c0006c29c25109ea5a44d68e210610989444b9bfa6248a452b15e728360c.png"
+                                         href="4525c0006c29c25109ea5a44d68e210610989444b9bfa6248a452b15e728360c.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">2s 099ms</span></td>
                 </tr>
-            <tr class="test-PENDING">
-                    <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>PENDING</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.2s</em></span></td>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-2"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Add business unit button
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=7">
+                                    <img src="31da4c39397adca39a524dac3190a70439ca6f6de76c23886b4d78b022e01f57.png"
+                                         href="31da4c39397adca39a524dac3190a70439ca6f6de76c23886b4d78b022e01f57.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=8">
+                                    <img src="b6cb4091990debc17f715ef5279e1e9c01dca75116183094ecc1e463617dd401.png"
+                                         href="b6cb4091990debc17f715ef5279e1e9c01dca75116183094ecc1e463617dd401.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">1s 013ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-3"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey enters 'Armenia' into Business unit name input
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=9">
+                                    <img src="294befaac9d28636623235928a35abded1316e3f59aef874921e7b7269c1b1e7.png"
+                                         href="294befaac9d28636623235928a35abded1316e3f59aef874921e7b7269c1b1e7.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=10">
+                                    <img src="91d6b016a7f59635e1dab8659a98442e02ff136211e382543c20abc3ac69a784.png"
+                                         href="91d6b016a7f59635e1dab8659a98442e02ff136211e382543c20abc3ac69a784.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">978ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-4"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Dropdown list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=11">
+                                    <img src="91d6b016a7f59635e1dab8659a98442e02ff136211e382543c20abc3ac69a784.png"
+                                         href="91d6b016a7f59635e1dab8659a98442e02ff136211e382543c20abc3ac69a784.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=13">
+                                    <img src="a4e5fc11490d1a468727accaf86c125adb85b51606f83a3b8ff17be21cbe7595.png"
+                                         href="a4e5fc11490d1a468727accaf86c125adb85b51606f83a3b8ff17be21cbe7595.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">871ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-5"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey select from list
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=14">
+                                    <img src="a4e5fc11490d1a468727accaf86c125adb85b51606f83a3b8ff17be21cbe7595.png"
+                                         href="a4e5fc11490d1a468727accaf86c125adb85b51606f83a3b8ff17be21cbe7595.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=15">
+                                    <img src="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         href="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">412ms</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="0-0-0-6"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Angey clicks on Save business unit button
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=16">
+                                    <img src="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         href="b86ad8328ff9dbee6b526073c3c8c319f9df0d88866b53383cc2f268fbdd2a4e.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">816ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-1"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block">
+                                <i class="bi bi-caret-right-square imgstepSection0-1 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Then the user see the Armenia unit on the list
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=21">
+                                    <img src="1592ccd965d9cabc5354b7dde9905e84c45f632794779eb4b57535850ddb367c.png"
+                                         href="1592ccd965d9cabc5354b7dde9905e84c45f632794779eb4b57535850ddb367c.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                                <i class="bi bi-arrow-right"></i>
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=23">
+                                    <img src="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         href="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">805ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="0-1-0"></a>
+                            <span style="margin-left: 60px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then validate business unit
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                        <td width="160" class="SUCCESS-text">
+
+                                <a href="e2153624dfbcacaceb1ea238588ec10a_mma_windows_createbusinessunit_screenshots.html#screenshots?screenshot=22">
+                                    <img src="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         href="7f216c0417408ab6eed9405ee3478c78a29ad2411b47645bcf2135cdc05eb528.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">604ms</span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+            <tr class="test-SUCCESS">
+                    <td colspan="3"></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>11.46s</em></span></td>
             </tr>
 
         </table>

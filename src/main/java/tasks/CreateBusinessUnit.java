@@ -1,7 +1,7 @@
 package tasks;
 
 import interactions.SelectFromList;
-import models.BusinessUnitModel;
+import models.BusinessUnitLombok;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -15,10 +15,10 @@ import static userinterfaces.BusinessUnitPage.*;
 
 public class CreateBusinessUnit implements Task {
 
-    protected BusinessUnitModel businessUnitModel;
+    protected BusinessUnitLombok businessUnitLombok;
 
-    public CreateBusinessUnit(BusinessUnitModel businessUnitModel) {
-        this.businessUnitModel = businessUnitModel;
+    public CreateBusinessUnit(BusinessUnitLombok businessUnitLombok) {
+        this.businessUnitLombok = businessUnitLombok;
     }
 
     @Override
@@ -28,14 +28,14 @@ public class CreateBusinessUnit implements Task {
                 JavaScriptClick.on(BTN_ORGANIZATION),
                 JavaScriptClick.on(BTN_BUSINESS_UNIT),
                 JavaScriptClick.on(BTN_ADD_BUSINESS_UNIT),
-                Enter.theValue(businessUnitModel.getUnitName()).into(INPUT_BUSINESS_UNIT),
+                Enter.theValue(businessUnitLombok.getUnitName()).into(INPUT_BUSINESS_UNIT),
                 Click.on(DROPDOWN),
-                SelectFromList.on(LST_DROPDOWN, businessUnitModel.getBusiness()),
+                SelectFromList.on(LST_DROPDOWN, businessUnitLombok.getBusiness()),
                 JavaScriptClick.on(BTN_SAVE)
         );
     }
 
-    public static CreateBusinessUnit on(BusinessUnitModel businessUnitModel) {
-        return Instrumented.instanceOf(CreateBusinessUnit.class).withProperties(businessUnitModel);
+    public static CreateBusinessUnit on(BusinessUnitLombok businessUnitLombok) {
+        return Instrumented.instanceOf(CreateBusinessUnit.class).withProperties(businessUnitLombok);
     }
 }
